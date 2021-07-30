@@ -63,23 +63,30 @@
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            motion:layout_constraintHeight_percent="0.4"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintLeft_toLeftOf="parent"
             motion:layout_constraintRight_toRightOf="parent"
-            motion:layout_constraintHeight_percent="0.4" />
+             />
         <Constraint
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHeight_percent="0.6"
             motion:layout_constraintLeft_toLeftOf="parent"
             motion:layout_constraintRight_toRightOf="parent"
-            motion:layout_constraintHeight_percent="0.6"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.0" />
     </ConstraintSet>
 
 
-
+    <Transition
+        android:id="@+id/trns3"
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/end2"
+        motion:autoTransition="animateToEnd"
+        motion:duration="250">
+    </Transition>
 
 
 </MotionScene>
